@@ -4,12 +4,12 @@ title: About
 permalink: /about/
 ---
 
-Some information about you!
+Un étudiant en informatique
 
-### More Information
+### Plus d'informations
 
-A place to include any other types of information that you'd like to include about yourself.
+J'aime pas le php
 
-### Contact me
+### Me contacter
 
-[email@domain.com](mailto:email@domain.com)
+[pierre.chopinet.xyz](mailto:pierre.chopinet.xyz)
