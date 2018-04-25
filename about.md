@@ -1,6 +1,6 @@
 ---
 layout: page
-title: About
+title: A propos
 permalink: /about/
 ---
 
@@ -12,4 +12,4 @@ J'aime pas le php
 
 ### Me contacter
 
-[pierre.chopinet.xyz](mailto:pierre.chopinet.xyz)
+[pierre@chopinet.xyz](mailto:pierre@chopinet.xyz)
