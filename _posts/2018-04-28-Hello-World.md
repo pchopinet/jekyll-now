@@ -3,7 +3,7 @@ layout: post
 title: Hello world
 ---
 
-#### Présentation du blog
+### Présentation du blog
 
 Dans ce blog je vais parler d'informatique en général et de : 
 
