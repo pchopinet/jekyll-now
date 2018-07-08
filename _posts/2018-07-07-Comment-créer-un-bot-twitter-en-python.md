@@ -92,7 +92,7 @@ Il faut déjà créer un compte twitter, pour cela il vous faut une adresse mail
 
 Une fois le compte créé et que vous êtes connecté avec, allez sur : 
 
-https://apps.twitter.com
+[https://apps.twitter.com](https://apps.twitter.com)
 
 Vous devrez avoir quelque chose dans ce genre : 
 
@@ -310,9 +310,9 @@ python3 bot.py
 
 Notre bot reste basique, il y a de nombreuses façons de l'ameliorer par exemple des filtres plus complexes, une analyse du tweet pour faire des réponses dynamiques, etc...
 
-Lire la doc tweepy : http://tweepy.readthedocs.io/
+Lire la doc tweepy : [http://tweepy.readthedocs.io/]( http://tweepy.readthedocs.io/)
 
-Lire la doc twitter : https://developer.twitter.com/en/docs/basics/getting-started
+Lire la doc twitter : [https://developer.twitter.com](https://developer.twitter.com/en/docs/basics/getting-started)
 
 
 
