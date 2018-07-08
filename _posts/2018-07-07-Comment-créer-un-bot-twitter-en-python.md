@@ -249,7 +249,7 @@ class listener(StreamListener):
 
         tweet = all_data['text']
         username = all_data['user']['screen_name']
-        if not contains_word(tweet, 'RT') and not contains_word(tweet, 'saucisse'):
+        if not contains_word(tweet, 'RT') and not contains_word(tweet, 'exemple'):
             print(username, tweet)
             api.update_status(
                 status='@' + username + ' ' + text,
