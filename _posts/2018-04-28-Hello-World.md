@@ -4,7 +4,7 @@ title: Hello world
 ---
 
 ## Présentation du blog
-
+<!--end_excerpt-->
 Dans ce blog je vais parler d'informatique en général et de : 
 
 + Programmation 
