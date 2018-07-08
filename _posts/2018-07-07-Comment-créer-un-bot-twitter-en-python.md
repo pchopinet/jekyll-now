@@ -4,7 +4,7 @@ title: Comment créer un bot twitter en python avec tweepy
 ---
 
 Il y a quelques ~~jours~~ mois, j'ai créé un bot sur twitter, qui répond aux tweets contenant le mot crypter ou cryptage, car rappelons le, ces deux mots ne s'appliquent pas à l'informatique. On parle de chiffrer des données et non pas de crypter des données.
-
+<!--end_excerpt-->
 Pour rappel : 
 
 > ## crypter

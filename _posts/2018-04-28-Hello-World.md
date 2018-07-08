@@ -3,7 +3,7 @@ layout: post
 title: Hello world
 ---
 
-### Présentation du blog
+## Présentation du blog
 
 Dans ce blog je vais parler d'informatique en général et de : 
 
@@ -22,5 +22,5 @@ Des commentaires sont disponibles pour chaque article pour discuter sur le sujet
 
 Pour la régularité des articles, je ne sais pas encore, je vais commencer par un article par semaine, peut-être plus si j'ai des choses à dire.
 
-PS : je garantit pas à 100% la grammaire et l'orthographe de mes articles
+PS : je garantis pas à 100% la grammaire et l'orthographe de mes articles
 
