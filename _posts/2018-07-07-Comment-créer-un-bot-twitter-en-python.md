@@ -5,13 +5,11 @@ title: Comment créer un bot twitter en python avec tweepy
 
 Il y a quelques ~~jours~~ mois, j'ai créé un bot sur twitter, qui répond aux tweets contenant le mot crypter ou cryptage, car rappelons le, ces deux mots ne s'appliquent pas à l'informatique. On parle de chiffrer des données et non pas de crypter des données.
 <!--end_excerpt-->
-Pour rappel : 
+Pour rappel, d'après le Larousse :
 
 > ## crypter
 >
 > - **Abusif.** Réaliser le [cryptage](https://www.larousse.fr/dictionnaires/francais/cryptage/20841) de quelque chose. (En informatique, on dit aussi *encrypter*.) [Si l'on veut formellement intégrer la notion de « clé », il est préférable d'utiliser les termes chiffrer et chiffrement.] 
-
-[Définition du larrousse](https://www.larousse.fr/dictionnaires/francais/crypter/20845) 
 
 Le seul cas où on peut utiliser crypter c'est dans le verbe décrypter : 
 
@@ -19,7 +17,7 @@ Le seul cas où on peut utiliser crypter c'est dans le verbe décrypter :
 
 |        | Avec la clé | Sans la clé |
 | ------ | ----------- | ----------- |
-| Lire   | Dechiffrer  | Décrypter   |
+| Lire   | Déchiffrer  | Décrypter   |
 | Ecrire | Chiffrer    | ?           |
 
 Donc si le verbe crypter existait, il voudrait dire : écrire un message en ecriture secrète sans connaitre la clé ... ça n'a pas beaucoup de sens.
@@ -32,13 +30,13 @@ Ce bot a été réalisé en python, avec la librairie [tweepy](http://www.tweepy
 
 ## Installation
 
-Pour commencer il vous faut un interpréteur python en version 3, dans mon cas j'utiliserai python 3.5.
+Pour commencer, il vous faut un interpréteur python en version 3, dans mon cas j'utiliserai python 3.5.
 
 Je recommande d'utiliser linux pour ce tutoriel, mais cela peut fonctionner sous windows. Si vous êtes sur windows vous pouvez aussi utiliser le Windows Subsystem for Linux ([wsl](https://docs.microsoft.com/en-us/windows/wsl/install-win10)) pour avoir un linux dans votre windows.
 
 ### Linux - Ubuntu (& toutes distributions utilisant apt comme gestionnaire de paquets)
 
-Sous linux c'est assez simple.
+Sous linux, c'est assez simple.
 
 Depuis un terminal, installation de python3 : 
 
@@ -74,13 +72,13 @@ Déplacez-vous dans le dossier où vous avez installé python et faites :
 
 `shift + click droit -> ouvrir une fenêtre powershell` (sur windows 7 pour les hypsters ça doit etre cmd)
 
-Vous êtes normalement devant un terminal, dans ce terminal powershell tappez : 
+Vous êtes normalement devant un terminal, dans ce terminal powershell : 
 
 ```powershell
 .\python.exe -m pip install tweepy
 ```
 
-Et voilà vous êtes prêt
+Et voilà vous êtes prêt.
 
 ### MacOS
 
@@ -100,7 +98,7 @@ Vous devrez avoir quelque chose dans ce genre :
 
 Cliquez sur "create new app"
 
-Remplissez les informations demandées. Pour le website mettez le lien vers le profil twitter de votre bot.
+Remplissez les informations demandées. Pour le website, mettez le lien vers le profil twitter de votre bot.
 
 ![apps_twitter_new](../images/2018-07-07-apps_twitter_new.png)
 
@@ -112,20 +110,20 @@ Allez dans Keys and Access Tokens, en bas de la page cliquez sur "Create my acce
 
 ![2018-07-07-apps_twitter_token](../images/2018-07-07-apps_twitter_token.png)
 
-Sur cette page notez votre :
+Sur cette page, notez votre :
 
 - Consumer Key
 - Consumer Secret
 - Access Token
 - Access Token Secret
 
-Vous aurez besoin de tout ça pour vous connecter à l'api twitter.
+Vous aurez besoin de tout ça pour vous connecter à l'API twitter.
 
 ## Et maintenant le code !
 
 ### Authentification 
 
-Pour commencer, il faut pouvoir se connecter à l'api twitter, pour ça créons une petite fonction nommé "auth", qui va se connecter à l'api.
+Pour commencer, il faut pouvoir se connecter à l'api twitter, pour cela créons une petite fonction nommé "auth", qui va se connecter à l'API.
 
 ```python
 import tweepy
@@ -149,7 +147,7 @@ def auth():
     return api,auth
 ```
 
-Avec cette fonction vous pouvez maintenant vous connecter à twitter depuis python !
+Avec cette fonction, vous pouvez maintenant vous connecter à twitter depuis python !
 
 Faites attention avec vos clés et tokens "secret", ils ne doivent surtout pas être publique, ou quelqu'un pourrait usurper l'identité de votre bot. Vous pouvez aussi stocker vos clés dans un fichier et lire ce fichier dans votre fonction auth.
 
@@ -217,7 +215,7 @@ if not contains_word(tweet, "RT"):
 	print(username, tweet)
 ```
 
-Avec cette fonction on peut tester d'autre mots dans le tweet, pour affiner les tweets auquels on va répondre.
+Avec cette fonction, on peut tester d'autre mots dans le tweet, pour affiner les tweets auquels on va répondre.
 
 Une fois toutes les conditions passées, il faut repondre au tweet en question : 
 
@@ -267,7 +265,7 @@ twitterStream = Stream(auth, listener())
 twitterStream.filter(track=["saucisse"])
 ```
 
-Notez que cette version peut planter de temps en temps, pour régler ce problème vous pouvez mettre en place une gestion des exceptions pour gérer les soucis que vous rencontrez. Une autre solution, est de faire un script bash, qui test si le programme a planté et si oui le relance.
+Notez que cette version peut planter de temps en temps. Pour régler ce problème, vous pouvez mettre en place une gestion des exceptions pour gérer les soucis que vous rencontrez. Une autre solution, est de faire un script bash, qui test si le programme a planté et si oui, le relance.
 
 Par exemple une petite fonction bash présent dans mon projet [Automation Scripts](https://github.com/pchopinet/Automation-Scripts) :
 
@@ -292,7 +290,7 @@ Sous un linux, nous allons utiliser :
 nohup 
 ```
 
-Cette commande sous linux permet de lancer un programme, de façon qu'il ne soit pas dépendant du terminal avec lequel le programme a été lancé. Comme ça si on ferme le terminal, le programme continue son exécution.
+Cette commande sous linux permet de lancer un programme, de façon qu'il ne soit pas dépendant du terminal avec lequel le programme a été lancé. Comme cela, si on ferme le terminal, le programme continue son exécution.
 
 ```bash
 nohup python3 bot.py &
@@ -308,7 +306,7 @@ python3 bot.py
 
 ## Pour aller plus loin
 
-Notre bot reste basique, il y a de nombreuses façons de l'ameliorer par exemple des filtres plus complexes, une analyse du tweet pour faire des réponses dynamiques, etc...
+Notre bot reste basique, il y a de nombreuses façons de l'améliorer par exemple des filtres plus complexes, une analyse du tweet pour faire des réponses dynamiques, etc...
 
 Lire la doc tweepy : [http://tweepy.readthedocs.io/]( http://tweepy.readthedocs.io/)
 
